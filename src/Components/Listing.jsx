@@ -4,13 +4,18 @@ import Item from './Item'
 
 function Listing({items}) {
 
+    if (items.length) {
+        items = items.filter((item) => item.state === "active");
+    
+
     return (
      <div className="item-list">
-        {items.map(el => {
-            return <Item item={el} key={el.listing_id} />
-        })}
+        {items.map(el => 
+          <Item item={el} key={el.listing_id} />
+        )}
     </div>
     )
+  }
 }
 
 Listing.propTypes = {
@@ -22,4 +27,3 @@ Listing.defaultProps = {
 }
 
 export default Listing
-

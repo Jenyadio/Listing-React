@@ -9,11 +9,11 @@ function Item({item}) {
         <div className="item">
             <div className="item-image">
               <a href={url}>
-                <img src={MainImage} alt={title}/>
+                <img src={MainImage.url_570xN} alt={title}/>
               </a>
             </div>
             <div className="item-details">
-              <p className="item-title">{title}</p>
+              <p className="item-title">{title.length > 50 ? title.slice(0, 50).concat("...") : title}</p>
               <p className="item-price">{currency_code === 'USD' ? '$' 
                : currency_code === 'EUR' ? '€'
                : currency_code} 
@@ -30,11 +30,11 @@ function Item({item}) {
 }
 
 Item.propTypes = {
-    items: PropTypes.object.isRequired,
+    item: PropTypes.object.isRequired,
 }
 
 Item.defaultProps = {
-    items: {},
+    item: {},
 }
 
 export default Item
