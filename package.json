@@ -1,6 +1,7 @@
 {
   "name": "listing-react",
   "version": "0.1.0",
+  "homepage": "https://jenyadio.github.io/Listing-React/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
